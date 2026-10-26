@@ -28,6 +28,6 @@ jobs:
       - if: steps.gate.outputs.go == 'true'
         run: python update_tracker.py --import-xlsx tracker/Internship_Tracker.xlsx
         env:
-          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
-          SHEET_ID: ${{ secrets.SHEET_ID }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GOOGLE_SA_JSON: ${{ secrets.GOOGLE_CREDENTIALS }}
+            SHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
